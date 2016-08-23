@@ -2,6 +2,7 @@ import React from 'react';
 import store from '../store';
 import $ from 'jquery';
 import MovieTile from './movieTile';
+import DateModal from './DateModal';
 
 export default React.createClass({
   getInitialState: function() {
@@ -31,7 +32,7 @@ export default React.createClass({
     console.log(this.state);
     let movieList = this.state.movieList.map(function(movie, i, arr){
       return (
-        <MovieTile key={i} original_title={movie.original_title} poster_path={movie.poster_path}/>
+        <MovieTile key={i} original_title={movie.original_title} poster_path={movie.poster_path} showModal={DateModal}/>
       )
     })
     return (
