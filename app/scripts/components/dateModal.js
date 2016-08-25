@@ -1,12 +1,58 @@
 import React from 'react';
+import $ from 'jquery';
+import MovieDate from '../models/movieDate';
+import settings from '../settings';
+import store from '../store';
 
 export default React.createClass({
-  createDate: function() {
-    console.log('Create a Date!');
+  containerStyles: {
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    background: 'rgba(0,0,0,.5)'
+  },
+  contentStyles: {
+    background: 'white',
+    width: '75%',
+    margin: '0 auto',
+    height: '75vh',
+    marginTop: '12.5%'
+  },
+  createDate: function(e) {
+    e.preventDefault();
+    let newDate = new MovieDate({
+      title : this.props.title,
+      date : this.refs.date.value,
+      time : this.refs.time.value,
+      location : this.refs.location.value,
+      creator : store.session.get('username'),
+      attendees : [store.session.get('username')]
+    }) ;
+    // $.ajax({
+    //   type: 'POST',
+    //   url: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates`,
+    //   data: JSON.stringify(newDate),
+    //   contentType: 'application/json',
+    //   error: function(e) {console.log(e);}
+    // })
+    //   .then(() => {
+    //     console.log('It Posted!');
+    //     hashHistory.push('/home');
+    //   })
   },
   render: function() {
     return (
-      <h1> Here is the modal! </h1>
+      <div style={this.containerStyles}>
+      <form onSubmit={this.createDate} style={this.containerStyles}>
+      <input ref="date" type="date" placeholder="Date"/>
+      <input ref="location" type="location" placeholder="Location"/>
+      <input ref="time" type="time" placeholder="Time"/>
+      <input type="submit" />
+      <input type="button" value="Cancel" onClick={parent.hideModal}/>
+      </form>
+      </div>
     )
   }
 })

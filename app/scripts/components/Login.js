@@ -1,6 +1,8 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
+import { Link } from 'react-router';
 import store from '../store';
+
 
 export default React.createClass({
   getInitialState: function() {
@@ -43,7 +45,8 @@ export default React.createClass({
       <form onSubmit={this.submitHandler}>
         <input ref="username" type="text" placeholder="username" />
         <input ref="password" type="password" placeholder="password" />
-        <input type="submit" value="submit" />
+        <input type="submit" value="Log In" />
+        <Link to={`signup`}><input type="button" value="Sign Up"/> </Link>
       </form>
       </div>
     )

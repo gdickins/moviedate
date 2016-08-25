@@ -1,8 +1,10 @@
 import React from 'react';
 import store from '../store';
+import { Link } from 'react-router';
 import $ from 'jquery';
 import MovieTile from './movieTile';
 import DateModal from './DateModal';
+
 
 export default React.createClass({
   getInitialState: function() {
@@ -39,9 +41,10 @@ export default React.createClass({
       <div>
         <header>
           <input ref="searchTerm" type="text"/> <input type="submit" placeholder="Search" onClick={this.movieSearch}/>
+          <Link to={`dates`}><input type="button" value="Find a Date"/> </Link>
         </header>
         <main>
-          <h1>This is the movie tile </h1>
+          <h1>Movies</h1>
           {movieList}
         </main>
       </div>

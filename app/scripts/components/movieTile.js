@@ -18,7 +18,7 @@ export default React.createClass({
   render: function() {
     let modalDisplay;
     if (this.state.showModal) {
-      modalDisplay = <DateModal/>
+      modalDisplay = <DateModal title={this.props.original_title} img={`http://image.tmdb.org/t/p/w500${this.props.poster_path}`}/>
     }
     return (
       <div className="movieTile">
@@ -30,3 +30,5 @@ export default React.createClass({
     )
   }
 })
+
+//
