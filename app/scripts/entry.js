@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import router from './router';
 import settings from './settings';
+import session from './models/session';
 import $ from 'jquery';
 
 ReactDOM.render(router, document.getElementById('container'))
@@ -8,5 +9,7 @@ ReactDOM.render(router, document.getElementById('container'))
 $(document).ajaxSend(function(evt, xhr, jquerySettings) {
   if (jquerySettings.url.indexOf('kinvey') > -1){
   xhr.setRequestHeader('Authorization', settings.basicAuth)
-}
+} else if (session.authtoken) {
+    xhrAjax.setRequestHeader('Authorization', 'Kinvey ' + session.authtoken);
+  }
 })

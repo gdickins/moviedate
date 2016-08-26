@@ -31,7 +31,6 @@ export default React.createClass({
     })
   },
   render: function() {
-    console.log(this.state);
     let movieList = this.state.movieList.map(function(movie, i, arr){
       return (
         <MovieTile key={i} original_title={movie.original_title} poster_path={movie.poster_path} showModal={DateModal}/>
@@ -40,7 +39,7 @@ export default React.createClass({
     return (
       <div>
         <header>
-          <input ref="searchTerm" type="text"/> <input type="submit" placeholder="Search" onClick={this.movieSearch}/>
+          <input ref="searchTerm" type="text"/> <input type="submit" value="Movie Search" onClick={this.movieSearch}/>
           <Link to={`dates`}><input type="button" value="Find a Date"/> </Link>
         </header>
         <main>

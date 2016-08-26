@@ -30,17 +30,18 @@ export default React.createClass({
       creator : store.session.get('username'),
       attendees : [store.session.get('username')]
     }) ;
-    // $.ajax({
-    //   type: 'POST',
-    //   url: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates`,
-    //   data: JSON.stringify(newDate),
-    //   contentType: 'application/json',
-    //   error: function(e) {console.log(e);}
-    // })
-    //   .then(() => {
-    //     console.log('It Posted!');
-    //     hashHistory.push('/home');
-    //   })
+    console.log(newDate);
+    $.ajax({
+      type: 'POST',
+      url: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates`,
+      data: JSON.stringify(newDate),
+      contentType: 'application/json',
+      error: function(e) {console.log(e);}
+    })
+      .then(() => {
+        console.log('It Posted!');
+        hashHistory.push('/home');
+      })
   },
   render: function() {
     return (
@@ -50,7 +51,7 @@ export default React.createClass({
       <input ref="location" type="location" placeholder="Location"/>
       <input ref="time" type="time" placeholder="Time"/>
       <input type="submit" />
-      <input type="button" value="Cancel" onClick={parent.hideModal}/>
+      <input type="button" value="Cancel" onClick={this.props.hideModal}/>
       </form>
       </div>
     )
