@@ -20,6 +20,11 @@ export default React.createClass({
     })
   },
   render: function() {
+    let dateList = this.state.dateList.map(function(date, i, arr){
+      return (
+        <dateTile key={i} original_title={date.original_title} poster_path={date.poster_path} />
+      )
+    })
     return (
       <div>
       <header>

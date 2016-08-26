@@ -13,6 +13,7 @@ export default Backbone.Model.extend({
         error: function(e) {console.log(e);}
       })
       .then((s) => {
+        localStorage.setItem('authtoken', s._kmd.authtoken);
         this.set({
           username: s.username, authtoken: s._kmd.authtoken, _id: s._id
         });
@@ -31,6 +32,7 @@ export default Backbone.Model.extend({
       data: JSON.stringify({username: data.username, password: data.password, email: data.email}),
       contentType: 'application/json',
       success: (s) => {
+        localStorage.setItem('authtoken', s._kmd.authtoken);
         this.set({
           username: s.username, authtoken: s._kmd.authtoken, _id: s._id, email: s.email
         });
