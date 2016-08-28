@@ -41,7 +41,7 @@ export default React.createClass({
     })
       .then(() => {
         console.log('It Posted!');
-        this.props.hideModal;
+        this.props.hideModal();
       })
   },
   render: function() {

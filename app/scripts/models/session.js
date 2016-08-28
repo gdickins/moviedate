@@ -1,4 +1,5 @@
 import Backbone from 'backbone';
+import { hashHistory } from 'react-router';
 import $ from 'jquery';
 import settings from '../settings';
 
@@ -40,6 +41,16 @@ export default Backbone.Model.extend({
         });
       },
       error: function(e) {console.log(e);}
+    })
+  },
+  logout: function() {
+    $.ajax({
+      type: 'POST',
+      url: `https://baas.kinvey.com/user/${settings.appKey}/_logout`,
+      success: function() {
+        localStorage.clear();
+        hashHistory.push('/');
+      }
     })
   }
 })
