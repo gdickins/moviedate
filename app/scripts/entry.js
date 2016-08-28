@@ -9,11 +9,12 @@ ReactDOM.render(router, document.getElementById('container'))
 
 $(document).ajaxSend(function(evt, xhr, jquerySettings) {
   if (jquerySettings.url.indexOf('kinvey') > -1){
-    if (store.session.get('authtoken')) {
-        xhrAjax.setRequestHeader('Authorization', 'Kinvey ' + session.authtoken);
-      }
-
-  xhr.setRequestHeader('Authorization', settings.basicAuth)
+    if (localStorage.authtoken) {
+      console.log('kinvey Authorization')
+        xhr.setRequestHeader('Authorization', 'Kinvey ' + localStorage.authtoken);
+      } else {
+  console.log('basic Authorization')
+  xhr.setRequestHeader('Authorization', settings.basicAuth)}
 }})
 
 // if (jquerySettings.url.indexOf('kinvey') > -1) {

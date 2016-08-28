@@ -3,6 +3,7 @@ import $ from 'jquery';
 import MovieDate from '../models/movieDate';
 import settings from '../settings';
 import store from '../store';
+import { hashHistory } from 'react-router';
 
 export default React.createClass({
   containerStyles: {
@@ -40,7 +41,7 @@ export default React.createClass({
     })
       .then(() => {
         console.log('It Posted!');
-        hashHistory.push('/home');
+        this.props.hideModal;
       })
   },
   render: function() {
