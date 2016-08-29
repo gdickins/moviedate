@@ -25,6 +25,7 @@ export default React.createClass({
     e.preventDefault();
     let newDate = new MovieDate({
       title : this.props.title,
+      url : this.props.img,
       date : this.refs.date.value,
       time : this.refs.time.value,
       location : this.refs.location.value,
