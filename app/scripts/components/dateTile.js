@@ -1,33 +1,28 @@
 import React from 'react';
 import store from '../store';
 import Backbone from 'backbone';
+import movieDate from '../models/movieDate';
+import _ from 'underscore';
 
 export default React.createClass({
   // getInitialState: function(){
   //   return {attending : ''}
   // },
   joinDate: function() {
-    let modifiedList;
     let id = this.props.id;
+    let modifiedList = store.movieDates.get(id).get('attendees');
+    let alertMessage;
     if(this.props.attendees.indexOf(localStorage.username) > -1) {
-      modifiedList = store.movieDates.get(id);
-      // modifiedList.attendees.splice(this.props.attendees.indexOf(localStorage.username), 1);
+      alertMessage = "You have cancelled your attendance";
+      modifiedList = _.without(modifiedList, localStorage.username);
     } else {
-      modifiedList = store.movieDates.get(id);
-      // modifiedList.attendees.push(localStorage.username);
+      alertMessage = "You have joined this event";
+      modifiedList = modifiedList.concat(localStorage.username);
     }
-    console.log("id", id);
-    console.log("attendees", store.movieDates.get(id));
-    // $.ajax({
-    //   type: 'PUT',
-    //   url: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates/${this.props.id}`,
-    //   data: JSON.stringify(this.props.attendees),
-    //   contentType: 'application/json',
-    //   error: function(e) {console.log(e);}
-    // })
-    // .then(() => {
-    //
-    // })
+    alert(alertMessage);
+    store.movieDates.get(id).save({
+      attendees: modifiedList
+    });
   },
   render: function() {
     console.log('render');
@@ -46,5 +41,3 @@ export default React.createClass({
     )
   }
 })
-
-// <img src = {`http://image.tmdb.org/t/p/w500${this.props.poster_path}`} />
