@@ -18,12 +18,12 @@ export default React.createClass({
   render: function() {
     let modalDisplay;
     if (this.state.showModal) {
-      modalDisplay = <DateModal title={this.props.original_title} img={`http://image.tmdb.org/t/p/w500${this.props.poster_path}`} hideModal={this.hideModal}/>
+      modalDisplay = <DateModal title={this.props.original_title} img={this.props.url} hideModal={this.hideModal}/>
     }
     return (
       <div className="movieTile">
         <span>{this.props.original_title}</span>
-        <img src = {`http://image.tmdb.org/t/p/w500${this.props.poster_path}`} />
+        <img src = {this.props.url} />
         <input type = "button" value="Add" onClick={this.showModal}/>
         {modalDisplay}
       </div>

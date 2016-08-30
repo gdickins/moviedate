@@ -1,17 +1,36 @@
 import React from 'react';
 import store from '../store';
+import Backbone from 'backbone';
 
 export default React.createClass({
+  // getInitialState: function(){
+  //   return {attending : ''}
+  // },
   joinDate: function() {
+    let modifiedList;
+    let id = this.props.id;
     if(this.props.attendees.indexOf(localStorage.username) > -1) {
-      console.log('You are already attending this movie!');
+      modifiedList = store.movieDates.get(id);
+      // modifiedList.attendees.splice(this.props.attendees.indexOf(localStorage.username), 1);
+    } else {
+      modifiedList = store.movieDates.get(id);
+      // modifiedList.attendees.push(localStorage.username);
     }
-    // this.props.attendees.push(localStorage.username);
-    console.log("attendees",this.props.attendees);
-    console.log("creator", this.props.creator);
-
+    console.log("id", id);
+    console.log("attendees", store.movieDates.get(id));
+    // $.ajax({
+    //   type: 'PUT',
+    //   url: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates/${this.props.id}`,
+    //   data: JSON.stringify(this.props.attendees),
+    //   contentType: 'application/json',
+    //   error: function(e) {console.log(e);}
+    // })
+    // .then(() => {
+    //
+    // })
   },
   render: function() {
+    console.log('render');
     let buttonValue;
     if(this.props.attendees.indexOf(localStorage.username) > -1) {
       buttonValue = "Cancel Your Attendance!";

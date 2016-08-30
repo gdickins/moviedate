@@ -8,5 +8,5 @@ export default Backbone.Model.extend({
   imgURL: 'poster_path',
   date: 'date',
   location: 'location',
-  attendants: []
+  attendees: []
 })

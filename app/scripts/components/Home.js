@@ -32,8 +32,11 @@ export default React.createClass({
   },
   render: function() {
     let movieList = this.state.movieList.map(function(movie, i, arr){
+      if(movie.poster_path === null) {
+        console.log('bad images');
+      }
       return (
-        <MovieTile key={i} original_title={movie.original_title} poster_path={movie.poster_path} url={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} showModal={DateModal}/>
+        <MovieTile key={i} original_title={movie.original_title} url={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} showModal={DateModal}/>
       )
     })
     return (

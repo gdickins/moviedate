@@ -1,9 +1,11 @@
 import React from 'react';
+import Backbone from 'backbone';
 import { Link } from 'react-router';
 import store from '../store';
 import DateTile from './dateTile';
 import $ from 'jquery';
 import settings from '../settings';
+import movieDates from '../collections/movieDates';
 
 export default React.createClass({
   getInitialState: function() {
@@ -12,19 +14,21 @@ export default React.createClass({
     }
   },
   componentDidMount: function() {
-    $.ajax({
-      type: 'GET',
-      url: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates`,
-      success: (data) => {
-        console.log('server returns this', data);
-        this.setState({dateList: data})
-      }
-    })
+    store.movieDates.fetch();
+    store.movieDates.on('change update', this.changeState)
+  },
+  componentWillUnmount: function() {
+    store.movieDates.off('change update', this.changeState);
+  },
+  changeState: function() {
+    this.setState({
+      dateList:store.movieDates.toJSON()
+    });
   },
   render: function() {
     let dateList = this.state.dateList.map(function(date, i, arr){
       return (
-        <DateTile key={i} title={date.title} attendees={date.attendees} creator={date.creator} url={date.url}/>
+        <DateTile key={i} title={date.title} attendees={date.attendees} creator={date.creator} url={date.url} id={date._id}/>
       )
     })
     return (

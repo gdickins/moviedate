@@ -1,6 +1,7 @@
 import React from 'react';
+import Backbone from 'backbone';
 import $ from 'jquery';
-import MovieDate from '../models/movieDate';
+import movieDates from '../collections/movieDates';
 import settings from '../settings';
 import store from '../store';
 import { hashHistory } from 'react-router';
@@ -23,7 +24,7 @@ export default React.createClass({
   },
   createDate: function(e) {
     e.preventDefault();
-    let newDate = new MovieDate({
+    store.movieDates.create({
       title : this.props.title,
       url : this.props.img,
       date : this.refs.date.value,
@@ -31,24 +32,17 @@ export default React.createClass({
       location : this.refs.location.value,
       creator : store.session.get('username'),
       attendees : [store.session.get('username')]
-    }) ;
-    console.log(newDate);
-    $.ajax({
-      type: 'POST',
-      url: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates`,
-      data: JSON.stringify(newDate),
-      contentType: 'application/json',
-      error: function(e) {console.log(e);}
-    })
-      .then(() => {
-        console.log('It Posted!');
+    }, {
+      success: (data) => {
         this.props.hideModal();
-      })
+      }
+    });
   },
   render: function() {
     return (
       <div style={this.containerStyles}>
       <form onSubmit={this.createDate} style={this.containerStyles}>
+      <h1>When would you like to see {this.props.title}?</h1>
       <input ref="date" type="date" placeholder="Date"/>
       <input ref="location" type="location" placeholder="Location"/>
       <input ref="time" type="time" placeholder="Time"/>
