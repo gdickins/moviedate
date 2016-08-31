@@ -1,117 +1,248 @@
 @import "variables";
-
-body {
-  background-color: $color-background;
-  font-family: 'Open Sans', sans-serif;
-}
-input {
-    display: block;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-}
-header {
-  background-color: $color-header;
-  height: 30vh;
-  border-radius: 10px;
-}
-
-h1 {
-  color: $color-h1;
-  margin: 0 auto;
-  width: 20%;
-}
-form {
+@media only screen
+  and (max-width: 500px) {
+  body {
+    background-color: $color-background;
+    font-family: 'Open Sans', sans-serif;
+  }
   input {
+      display: block;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto;
+  }
+  header {
+    background-color: $color-header;
+    height: 35vh;
     border-radius: 10px;
   }
-  display: flex;
-  flex-direction: column;
+
+  h1 {
+    color: $color-h1;
+    margin: 0 auto;
+    width: 20%;
+  }
+  form {
+    input {
+      font-size: 24px;
+      border-radius: 10px;
+    }
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movieTile {
+    span {
+      font-size: 18px;
+      color: $color-header;
+      height: 20%;
+      word-wrap: normal;
+      text-align: center;
+      vertical-align: middle;
+    }
+    border: 2px solid $color-border;
+    border-radius: 10px;
+    background-color: $color-h1;
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    height: 50vh;
+    img {
+      height: 60%;
+    }
+  }
+  .dateTile {
+    author {
+      font-size: 33px;
+      color: $color-header;
+      height: 25%;
+      word-wrap: normal;
+      text-align: center;
+      vertical-align: middle;
+    }
+    time {
+      font-size: 33px;
+      color: $color-border;
+      height: 30%;
+      word-wrap: normal;
+      text-align: center;
+      vertical-align: middle;
+    }
+    border: 2px solid $color-border;
+    border-radius: 10px;
+    background-color: $color-h1;
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    height: 65vh;
+    img {
+      height: 60%;
+    }
+  }
+  .btn {
+    font-size: 24px;
+    background-color: $color-border;
+    border-radius: 10px;
+    color: $color-highlight;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .btn:hover {
+    font-size: 24px;
+    background-color: $color-header;
+  }
+  .tileBtn {
+    font-size: 33px;
+    width: 100%;
+    height: 10vh;
+    background-color: $color-border;
+    border-radius: 10px;
+    color: $color-highlight;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .tileBtn:hover {
+    background-color: $color-header;
+  }
+  .searchBtn {
+    font-size: 24px;
+    background-color: $color-highlight;
+    border-radius: 10px;
+    color: $color-header;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .searchBtn:hover {
+    font-size: 24px;
+    background-color: $color-header;
+    color: $color-highlight;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-.movieTile {
-  span {
+@media only screen
+  and (min-width: 500px) {
+  body {
+    background-color: $color-background;
+    font-family: 'Open Sans', sans-serif;
+  }
+  input {
+      display: block;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto;
+  }
+  header {
+    background-color: $color-header;
+    height: 35vh;
+    border-radius: 10px;
+  }
+
+  h1 {
+    color: $color-h1;
+    margin: 0 auto;
+    width: 20%;
+  }
+  form {
+    input {
+      font-size: 20px;
+      border-radius: 10px;
+    }
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movieTile {
+    span {
+      font-size: 20px;
+      color: $color-header;
+      height: 20%;
+      word-wrap: normal;
+      text-align: center;
+      vertical-align: middle;
+    }
+    border: 2px solid $color-border;
+    border-radius: 10px;
+    background-color: $color-h1;
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    height: 50vh;
+    img {
+      height: 60%;
+    }
+  }
+  .dateTile {
+    author {
+      font-size: 16px;
+      color: $color-header;
+      height: 25%;
+      word-wrap: normal;
+      text-align: center;
+      vertical-align: middle;
+    }
+    time {
+      font-size: 12px;
+      color: $color-border;
+      height: 30%;
+      word-wrap: normal;
+      text-align: center;
+      vertical-align: middle;
+    }
+    border: 2px solid $color-border;
+    border-radius: 10px;
+    background-color: $color-h1;
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    height: 65vh;
+    img {
+      height: 60%;
+    }
+  }
+  .btn {
+    font-size: 20px;
+    background-color: $color-border;
+    border-radius: 10px;
+    color: $color-highlight;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .btn:hover {
+    font-size: 20px;
+    background-color: $color-header;
+  }
+  .tileBtn {
     font-size: 14px;
+    width: 100%;
+    height: 10vh;
+    background-color: $color-border;
+    border-radius: 10px;
+    color: $color-highlight;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .tileBtn:hover {
+    background-color: $color-header;
+  }
+  .searchBtn {
+    font-size: 20px;
+    background-color: $color-highlight;
+    border-radius: 10px;
     color: $color-header;
-    height: 20%;
-    word-wrap: normal;
-    text-align: center;
-    vertical-align: middle;
+    text-decoration: none;
+    transition: all 1s ease 0s;
   }
-  border: 2px solid $color-border;
-  border-radius: 10px;
-  background-color: $color-h1;
-  display: flex;
-  flex-direction: column;
-  width: 20vh;
-  height: 50vh;
-  img {
-    height: 60%;
+  .searchBtn:hover {
+    font-size: 20px;
+    background-color: $color-header;
+    color: $color-highlight;
   }
-}
-.dateTile {
-  author {
-    font-size: 16px;
-    color: $color-header;
-    height: 30%;
-    word-wrap: normal;
-    text-align: center;
-    vertical-align: middle;
+  main {
+    display: flex;
+    flex-wrap: wrap;
   }
-  time {
-    font-size: 12px;
-    color: $color-border;
-    height: 30%;
-    word-wrap: normal;
-    text-align: center;
-    vertical-align: middle;
-  }
-  border: 2px solid $color-border;
-  border-radius: 10px;
-  background-color: $color-h1;
-  display: flex;
-  flex-direction: column;
-  width: 20vh;
-  height: 60vh;
-  img {
-    height: 60%;
-  }
-}
-.btn {
-  background-color: $color-border;
-  border-radius: 10px;
-  color: $color-highlight;
-  text-decoration: none;
-  transition: all 1s ease 0s;
-}
-.btn:hover {
-  background-color: $color-header;
-}
-.tileBtn {
-  font-size: 14px;
-  width: 100%;
-  height: 10vh;
-  background-color: $color-border;
-  border-radius: 10px;
-  color: $color-highlight;
-  text-decoration: none;
-  transition: all 1s ease 0s;
-}
-.tileBtn:hover {
-  background-color: $color-header;
-}
-.searchBtn {
-  background-color: $color-highlight;
-  border-radius: 10px;
-  color: $color-header;
-  text-decoration: none;
-  transition: all 1s ease 0s;
-}
-.searchBtn:hover {
-  background-color: $color-header;
-  color: $color-highlight;
-}
-main {
-  display: flex;
-  flex-wrap: wrap;
 }

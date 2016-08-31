@@ -43,7 +43,6 @@ export default React.createClass({
           <input ref="username" type="text" placeholder="username" />
           <input ref="email" type="email" placeholder="email" />
           <input ref="password" type="password" placeholder="password" />
-          <input ref="verifyPassword" type="password" placeholder="verify password" />
           <input className="searchBtn" type="submit" value="submit" />
         </form>
         <Link to={`/`}> <input className="btn" type="button" value="Already a Member?"/> </Link>
