@@ -1,34 +1,59 @@
 body {
-  background-color: gray; }
+  background-color: #AA3939; }
+
+input {
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto; }
 
 header {
-  background-color: black;
-  height: 20vh; }
+  background-color: #1D1111;
+  height: 25vh;
+  border-radius: 10px; }
 
 h1 {
-  color: red;
+  color: #F13333;
   margin: 0 auto;
   width: 20%; }
 
 form {
   display: flex;
   flex-direction: column; }
+  form input {
+    border-radius: 10px; }
 
 .movieTile {
+  border: 2px solid #632D2D;
+  border-radius: 10px;
+  background-color: #F13333;
   display: flex;
   flex-direction: column;
-  width: 10vw;
-  height: 30vh; }
+  width: 20vh;
+  height: 50vh; }
+  .movieTile span {
+    font-size: 14px;
+    color: #1D1111;
+    height: 20%;
+    word-wrap: normal; }
   .movieTile img {
-    height: 50%; }
+    height: 60%; }
 
 .dateTile {
+  border: 2px solid #632D2D;
+  border-radius: 10px;
+  background-color: #F13333;
   display: flex;
   flex-direction: column;
-  width: 10vw;
-  height: 30vh; }
+  width: 20vh;
+  height: 50vh; }
+  .dateTile span {
+    font-size: 14px;
+    color: #1D1111;
+    height: 30%;
+    word-wrap: normal; }
   .dateTile img {
-    height: 50%; }
+    height: 60%; }
 
 main {
   display: flex;

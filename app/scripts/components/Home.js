@@ -31,12 +31,15 @@ export default React.createClass({
     })
   },
   render: function() {
+    let imageURL;
     let movieList = this.state.movieList.map(function(movie, i, arr){
       if(movie.poster_path === null) {
-        console.log('bad images');
+        imageURL = '../../assets/images/missing.png';
+      } else {
+        imageURL = `http://image.tmdb.org/t/p/w500${movie.poster_path}`;
       }
       return (
-        <MovieTile key={i} original_title={movie.original_title} url={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} showModal={DateModal}/>
+        <MovieTile key={i} original_title={movie.original_title} url={imageURL} showModal={DateModal}/>
       )
     })
     return (
@@ -44,10 +47,10 @@ export default React.createClass({
         <header>
         <h1>Movies</h1>
         <form onSubmit={this.movieSearch}>
-          <input ref="searchTerm" type="text"/> <input type="submit" value="Movie Search" />
+          <input ref="searchTerm" placeholder="Find a Movie!" type="text"/> <input className="btn" type="submit" value="Movie Search" />
         </form>
-          <Link to={`dates`}><input type="button" value="Find a Date"/> </Link>
-          <input type="button" value="Log out" onClick={store.session.logout} />
+          <Link to={`dates`}><input type="button" className="btn" value="Find a Date"/> </Link>
+          <input type="button" className="btn" value="Log out" onClick={store.session.logout} />
         </header>
         <main>
           {movieList}

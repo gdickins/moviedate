@@ -28,15 +28,15 @@ export default React.createClass({
   render: function() {
     let dateList = this.state.dateList.map(function(date, i, arr){
       return (
-        <DateTile key={i} title={date.title} attendees={date.attendees} creator={date.creator} url={date.url} id={date._id}/>
+        <DateTile key={i} title={date.title} attendees={date.attendees} date={date.date} time={date.time} creator={date.creator} url={date.url} id={date._id}/>
       )
     })
     return (
       <div>
       <header>
       <h1>Date List</h1>
-      <Link to={`home`}><input type="button" value="Back to Home"/> </Link>
-      <input type="button" value="Log out" onClick={store.session.logout} />
+      <Link to={`home`}><input className="btn" type="button" value="Back to Home"/> </Link>
+      <input type="button" className="btn" value="Log out" onClick={store.session.logout} />
       </header>
       <main>
       {dateList}

@@ -25,7 +25,6 @@ export default React.createClass({
     }, {})
     store.session.login(data)
     .then(function(response) {
-      console.log(response);
     });
   },
   shouldComponentUpdate: function(nextProps, nextState) {
@@ -45,9 +44,9 @@ export default React.createClass({
       <form onSubmit={this.submitHandler}>
         <input ref="username" type="text" placeholder="username" />
         <input ref="password" type="password" placeholder="password" />
-        <input type="submit" value="Log In" />
+        <input className="btn" type="submit" value="Log In" />
       </form>
-        <Link to={`signup`}><input type="button" value="Sign Up"/> </Link>
+        <Link to={`signup`}><input className="btn" type="button" value="Sign Up"/> </Link>
 
       </div>
     )

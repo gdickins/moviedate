@@ -27,13 +27,14 @@ export default React.createClass({
   render: function() {
     let buttonValue;
     if(this.props.attendees.indexOf(localStorage.username) > -1) {
-      buttonValue = "Cancel Your Attendance!";
+      buttonValue = "Cancel!";
     } else {
-      buttonValue = "Join This Movie!"
+      buttonValue = "Join!"
     }
     return (
       <div className="dateTile">
         <span>{this.props.title} created by {this.props.creator}</span>
+        <span>{this.props.date} at {this.props.time}</span>
         <img src = {this.props.url} />
         <input type="button" value={buttonValue} onClick={this.joinDate} />
       </div>
