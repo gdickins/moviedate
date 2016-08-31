@@ -46,8 +46,9 @@ export default React.createClass({
         <input ref="username" type="text" placeholder="username" />
         <input ref="password" type="password" placeholder="password" />
         <input type="submit" value="Log In" />
-        <Link to={`signup`}><input type="button" value="Sign Up"/> </Link>
       </form>
+        <Link to={`signup`}><input type="button" value="Sign Up"/> </Link>
+
       </div>
     )
   }

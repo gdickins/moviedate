@@ -25,7 +25,6 @@ export default React.createClass({
     });
   },
   render: function() {
-    console.log('render');
     let buttonValue;
     if(this.props.attendees.indexOf(localStorage.username) > -1) {
       buttonValue = "Cancel Your Attendance!";

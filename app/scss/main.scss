@@ -3,12 +3,40 @@ body {
 }
 
 header {
-  background-image: url(http://cdn.makeuseof.com/wp-content/uploads/2015/04/movie-theater-revival-setup.jpg?b34c28);
-  height: 50vh;
+  background-color: black;
+  height: 20vh;
 }
 
 h1 {
   color: red;
   margin: 0 auto;
   width: 20%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.movieTile {
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+  height: 30vh;
+  img {
+    height: 50%;
+  }
+}
+.dateTile {
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+  height: 30vh;
+  img {
+    height: 50%;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
 }
