@@ -39,15 +39,16 @@ export default React.createClass({
       <div>
       <header>
         <h1>Movie Date</h1>
+        <form onSubmit={this.submitHandler}>
+          <input ref="username" type="text" placeholder="username" />
+          <input ref="email" type="email" placeholder="email" />
+          <input ref="password" type="password" placeholder="password" />
+          <input ref="verifyPassword" type="password" placeholder="verify password" />
+          <input className="searchBtn" type="submit" value="submit" />
+        </form>
+        <Link to={`/`}> <input className="btn" type="button" value="Already a Member?"/> </Link>
       </header>
-      <form onSubmit={this.submitHandler}>
-        <input ref="username" type="text" placeholder="username" />
-        <input ref="email" type="email" placeholder="email" />
-        <input ref="password" type="password" placeholder="password" />
-        <input ref="verifyPassword" type="password" placeholder="verify password" />
-        <input className="btn" type="submit" value="submit" />
-      </form>
-      <Link to={`/`}> <input className="btn" type="button" value="Already a Member?"/> </Link>
+
       </div>
     )
   }

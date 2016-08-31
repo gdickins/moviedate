@@ -33,10 +33,10 @@ export default React.createClass({
     }
     return (
       <div className="dateTile">
-        <span>{this.props.title} created by {this.props.creator}</span>
-        <span>{this.props.date} at {this.props.time}</span>
+        <author>{this.props.title} created by {this.props.creator}</author>
+        <time>{this.props.date} at {this.props.time}</time>
         <img src = {this.props.url} />
-        <input type="button" value={buttonValue} onClick={this.joinDate} />
+        <input className="tileBtn" type="button" value={buttonValue} onClick={this.joinDate} />
       </div>
     )
   }

@@ -2,6 +2,7 @@
 
 body {
   background-color: $color-background;
+  font-family: 'Open Sans', sans-serif;
 }
 input {
     display: block;
@@ -11,7 +12,7 @@ input {
 }
 header {
   background-color: $color-header;
-  height: 25vh;
+  height: 30vh;
   border-radius: 10px;
 }
 
@@ -34,6 +35,8 @@ form {
     color: $color-header;
     height: 20%;
     word-wrap: normal;
+    text-align: center;
+    vertical-align: middle;
   }
   border: 2px solid $color-border;
   border-radius: 10px;
@@ -47,11 +50,21 @@ form {
   }
 }
 .dateTile {
-  span {
-    font-size: 14px;
+  author {
+    font-size: 16px;
     color: $color-header;
     height: 30%;
     word-wrap: normal;
+    text-align: center;
+    vertical-align: middle;
+  }
+  time {
+    font-size: 12px;
+    color: $color-border;
+    height: 30%;
+    word-wrap: normal;
+    text-align: center;
+    vertical-align: middle;
   }
   border: 2px solid $color-border;
   border-radius: 10px;
@@ -59,13 +72,45 @@ form {
   display: flex;
   flex-direction: column;
   width: 20vh;
-  height: 50vh;
+  height: 60vh;
   img {
     height: 60%;
   }
 }
-
-
+.btn {
+  background-color: $color-border;
+  border-radius: 10px;
+  color: $color-highlight;
+  text-decoration: none;
+  transition: all 1s ease 0s;
+}
+.btn:hover {
+  background-color: $color-header;
+}
+.tileBtn {
+  font-size: 14px;
+  width: 100%;
+  height: 10vh;
+  background-color: $color-border;
+  border-radius: 10px;
+  color: $color-highlight;
+  text-decoration: none;
+  transition: all 1s ease 0s;
+}
+.tileBtn:hover {
+  background-color: $color-header;
+}
+.searchBtn {
+  background-color: $color-highlight;
+  border-radius: 10px;
+  color: $color-header;
+  text-decoration: none;
+  transition: all 1s ease 0s;
+}
+.searchBtn:hover {
+  background-color: $color-header;
+  color: $color-highlight;
+}
 main {
   display: flex;
   flex-wrap: wrap;

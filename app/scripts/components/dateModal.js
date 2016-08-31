@@ -13,7 +13,7 @@ export default React.createClass({
     right: 0,
     bottom: 0,
     left: 0,
-    background: 'rgba(0,0,0,.5)'
+    background: 'rgba(0,0,0,.7)'
   },
   contentStyles: {
     background: 'white',
@@ -46,7 +46,7 @@ export default React.createClass({
       <input ref="date" type="date" min="2016-08-30" max="2020-08-30" placeholder="Date"/>
       <input ref="location" type="location" placeholder="Location"/>
       <input ref="time" type="time" placeholder="Time"/>
-      <input className="btn" type="submit" />
+      <input className="searchBtn" type="submit" />
       <input className="btn" type="button" value="Cancel" onClick={this.props.hideModal}/>
       </form>
       </div>

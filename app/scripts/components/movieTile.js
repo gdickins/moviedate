@@ -24,7 +24,7 @@ export default React.createClass({
       <div className="movieTile">
         <span>{this.props.original_title}</span>
         <img src = {this.props.url} />
-        <input type="button" value="Add" onClick={this.showModal}/>
+        <input className="tileBtn" type="button" value="Create Date" onClick={this.showModal}/>
         {modalDisplay}
       </div>
     )

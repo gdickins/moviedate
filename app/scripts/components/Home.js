@@ -47,7 +47,7 @@ export default React.createClass({
         <header>
         <h1>Movies</h1>
         <form onSubmit={this.movieSearch}>
-          <input ref="searchTerm" placeholder="Find a Movie!" type="text"/> <input className="btn" type="submit" value="Movie Search" />
+          <input ref="searchTerm" placeholder="Find a Movie!" type="text"/> <input className="searchBtn" type="submit" value="Movie Search" />
         </form>
           <Link to={`dates`}><input type="button" className="btn" value="Find a Date"/> </Link>
           <input type="button" className="btn" value="Log out" onClick={store.session.logout} />
