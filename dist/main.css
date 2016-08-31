@@ -1,4 +1,4 @@
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) and (orientation: portrait) {
   body {
     background-color: #AA3939;
     font-family: 'Open Sans', sans-serif; }
@@ -110,117 +110,116 @@
   main {
     display: flex;
     flex-wrap: wrap; } }
-@media only screen and (min-width: 500px) {
-  body {
-    background-color: #AA3939;
-    font-family: 'Open Sans', sans-serif; }
+body {
+  background-color: #AA3939;
+  font-family: 'Open Sans', sans-serif; }
 
-  input {
-    display: block;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto; }
+input {
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto; }
 
-  header {
-    background-color: #1D1111;
-    height: 35vh;
+header {
+  background-color: #1D1111;
+  height: 35vh;
+  border-radius: 10px; }
+
+h1 {
+  color: #F13333;
+  margin: 0 auto;
+  width: 20%; }
+
+form {
+  display: flex;
+  flex-direction: column; }
+  form input {
+    font-size: 20px;
     border-radius: 10px; }
 
-  h1 {
-    color: #F13333;
-    margin: 0 auto;
-    width: 20%; }
-
-  form {
-    display: flex;
-    flex-direction: column; }
-    form input {
-      font-size: 20px;
-      border-radius: 10px; }
-
-  .movieTile {
-    border: 2px solid #632D2D;
-    border-radius: 10px;
-    background-color: #F13333;
-    display: flex;
-    flex-direction: column;
-    width: 20vh;
-    height: 50vh; }
-    .movieTile span {
-      font-size: 20px;
-      color: #1D1111;
-      height: 20%;
-      word-wrap: normal;
-      text-align: center;
-      vertical-align: middle; }
-    .movieTile img {
-      height: 60%; }
-
-  .dateTile {
-    border: 2px solid #632D2D;
-    border-radius: 10px;
-    background-color: #F13333;
-    display: flex;
-    flex-direction: column;
-    width: 20vh;
-    height: 65vh; }
-    .dateTile author {
-      font-size: 16px;
-      color: #1D1111;
-      height: 25%;
-      word-wrap: normal;
-      text-align: center;
-      vertical-align: middle; }
-    .dateTile time {
-      font-size: 12px;
-      color: #632D2D;
-      height: 30%;
-      word-wrap: normal;
-      text-align: center;
-      vertical-align: middle; }
-    .dateTile img {
-      height: 60%; }
-
-  .btn {
+.movieTile {
+  border: 2px solid #632D2D;
+  border-radius: 10px;
+  background-color: #F13333;
+  display: flex;
+  flex-direction: column;
+  width: 20vh;
+  height: 50vh; }
+  .movieTile span {
     font-size: 20px;
-    background-color: #632D2D;
-    border-radius: 10px;
-    color: #FF1717;
-    text-decoration: none;
-    transition: all 1s ease 0s; }
-
-  .btn:hover {
-    font-size: 20px;
-    background-color: #1D1111; }
-
-  .tileBtn {
-    font-size: 14px;
-    width: 100%;
-    height: 10vh;
-    background-color: #632D2D;
-    border-radius: 10px;
-    color: #FF1717;
-    text-decoration: none;
-    transition: all 1s ease 0s; }
-
-  .tileBtn:hover {
-    background-color: #1D1111; }
-
-  .searchBtn {
-    font-size: 20px;
-    background-color: #FF1717;
-    border-radius: 10px;
     color: #1D1111;
-    text-decoration: none;
-    transition: all 1s ease 0s; }
+    height: 20%;
+    word-wrap: normal;
+    text-align: center;
+    vertical-align: middle; }
+  .movieTile img {
+    height: 60%; }
 
-  .searchBtn:hover {
-    font-size: 20px;
-    background-color: #1D1111;
-    color: #FF1717; }
+.dateTile {
+  border: 2px solid #632D2D;
+  border-radius: 10px;
+  background-color: #F13333;
+  display: flex;
+  flex-direction: column;
+  width: 20vh;
+  height: 65vh; }
+  .dateTile author {
+    font-size: 16px;
+    color: #1D1111;
+    height: 25%;
+    word-wrap: normal;
+    text-align: center;
+    vertical-align: middle; }
+  .dateTile time {
+    font-size: 12px;
+    color: #632D2D;
+    height: 30%;
+    word-wrap: normal;
+    text-align: center;
+    vertical-align: middle; }
+  .dateTile img {
+    height: 60%; }
 
-  main {
-    display: flex;
-    flex-wrap: wrap; } }
+.btn {
+  font-size: 20px;
+  background-color: #632D2D;
+  border-radius: 10px;
+  color: #FF1717;
+  text-decoration: none;
+  transition: all 1s ease 0s; }
+
+.btn:hover {
+  font-size: 20px;
+  background-color: #1D1111; }
+
+.tileBtn {
+  font-size: 14px;
+  width: 100%;
+  height: 10vh;
+  background-color: #632D2D;
+  border-radius: 10px;
+  color: #FF1717;
+  text-decoration: none;
+  transition: all 1s ease 0s; }
+
+.tileBtn:hover {
+  background-color: #1D1111; }
+
+.searchBtn {
+  font-size: 20px;
+  background-color: #FF1717;
+  border-radius: 10px;
+  color: #1D1111;
+  text-decoration: none;
+  transition: all 1s ease 0s; }
+
+.searchBtn:hover {
+  font-size: 20px;
+  background-color: #1D1111;
+  color: #FF1717; }
+
+main {
+  display: flex;
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=main.css.map */
