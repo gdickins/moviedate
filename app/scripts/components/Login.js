@@ -39,7 +39,7 @@ export default React.createClass({
     return (
       <div>
       <header id="loginHeader">
-        <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
+        <h1 id="loginLogo" className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
         <form className="loginForm">
           <input ref="username" type="text" placeholder="username" />
           <input ref="password" type="password" placeholder="password" />

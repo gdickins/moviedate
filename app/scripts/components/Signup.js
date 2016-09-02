@@ -38,14 +38,14 @@ export default React.createClass({
     return (
       <div>
       <header id="signupHeader">
-        <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
+        <h1 id="loginLogo" className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
         <form className="loginForm" onSubmit={this.submitHandler}>
           <input ref="username" type="text" placeholder="username" />
           <input ref="email" type="email" placeholder="email" />
           <input ref="password" type="password" placeholder="password" />
           <button id="signupBtn" className="btn" type="submit" value="submit"><i className="fa fa-user-plus" aria-hidden="true"></i></button>
         </form>
-        <Link to={`/`}> <input className="btn" type="button" value="Already a Member?"/> </Link>
+        <Link to={`/`}> <input id="btnMember" className="btn" type="button" value="Already a Member?"/> </Link>
       </header>
 
       </div>

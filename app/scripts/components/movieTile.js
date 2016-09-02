@@ -26,7 +26,7 @@ export default React.createClass({
         <div className="movieInfo">
           <div className="movieTitle">{this.props.original_title}</div>
           <div className="moviePlot">{this.props.overview}</div>
-          <input className="tileBtn" type="button" value="Create Date" onClick={this.showModal}/>
+          <input className="tileBtn" type="button" value="Let's See It!" onClick={this.showModal}/>
         </div>
         {modalDisplay}
       </div>

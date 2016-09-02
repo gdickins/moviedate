@@ -1,7 +1,10 @@
 @import "variables";
 
 @media (max-width: 1000px) {
-
+  .dateProps {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   body {
     background-color: $color-background;
     font-family: 'Open Sans', sans-serif;
@@ -319,17 +322,22 @@
       .movieTitle {
       margin-left: 0 auto;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 24px;
       margin: 0 auto;
       width: 75%;
     }
       .moviePlot {
         color: $color-text;
         display: block;
-        margin: 5%;
+        margin-left: 5%;
+        height: 26vh;
+        width: 110%;
+        background: #FFFFFF;
         margin-top: 2%;
         margin-bottom: 2%;
         text-align: justify;
+        overflow-y: scroll;
+        padding: 5px;
       }
     }
     img {
@@ -412,9 +420,10 @@
     background-color: $color-button-transition;
   }
   .tileBtn {
+    margin-top: 10px;
     margin-left: 5%;
     font-size: 33px;
-    width: 100%;
+    width: 110%;
     height: 10vh;
     background-color: $color-button-regular;
     border-radius: 3px;
@@ -430,8 +439,8 @@
   .dateTileBtn {
     margin-left: 5%;
     font-size: 33px;
-    width: 45%;
-    height: 30vh;
+    width: 30%;
+    height: 15vh;
     background-color: $color-button-regular;
     border-radius: 3px;
     border: none;
@@ -486,7 +495,8 @@
   }
   #friends {
     margin-top: 20px;
-    width: 45%;
+    padding: 10px;
+    width: 42%;
   }
 
   #signupBtn {
@@ -527,5 +537,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
-
+  #loginLogo {
+    width: 100%;
+  }
 }

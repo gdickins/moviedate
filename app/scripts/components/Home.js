@@ -34,7 +34,7 @@ export default React.createClass({
     let imageURL;
     let movieList = this.state.movieList.map(function(movie, i, arr){
       if(movie.poster_path === null) {
-        imageURL = '../../assets/images/missing.png';
+        imageURL = '/assets/images/missing.png';
       } else {
         imageURL = `http://image.tmdb.org/t/p/w500${movie.poster_path}`;
       }
