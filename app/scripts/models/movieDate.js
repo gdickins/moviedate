@@ -6,7 +6,7 @@ export default Backbone.Model.extend({
   urlRoot: `https://baas.kinvey.com/appdata/${settings.appKey}/movieDates`,
   defaults: {
     title: 'original_title',
-    imgURL: 'poster_path',
+    overview: 'overview',
     date: 'date',
     location: 'location',
     attendees: []

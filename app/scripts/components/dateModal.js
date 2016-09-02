@@ -27,6 +27,7 @@ export default React.createClass({
     store.movieDates.create({
       title : this.props.title,
       url : this.props.img,
+      overview : this.props.overview,
       date : this.refs.date.value,
       time : this.refs.time.value,
       location : this.refs.location.value,

@@ -44,7 +44,7 @@ export default React.createClass({
     })
     return (
       <div>
-        <header>
+        <header id="homeHeader">
         <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
         <button className="btn" id="logoutBtn" onClick={store.session.logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button>
         <form className="searchForm" onSubmit={this.movieSearch}>
@@ -52,7 +52,7 @@ export default React.createClass({
         </form>
           <Link to={`dates`}><input id="friends" type="button" className="btn" value="Friends' Movie Plans"/> </Link>
         </header>
-        <main>
+        <main id="homeMain">
           {movieList}
         </main>
       </div>

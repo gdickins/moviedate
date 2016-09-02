@@ -39,11 +39,11 @@ export default React.createClass({
       <div>
       <header>
         <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
-        <form onSubmit={this.submitHandler}>
+        <form className="loginForm" onSubmit={this.submitHandler}>
           <input ref="username" type="text" placeholder="username" />
           <input ref="email" type="email" placeholder="email" />
           <input ref="password" type="password" placeholder="password" />
-          <button className="btn" type="submit" value="submit"><i className="fa fa-user-plus" aria-hidden="true"></i></button>
+          <button id="signupBtn" className="btn" type="submit" value="submit"><i className="fa fa-user-plus" aria-hidden="true"></i></button>
         </form>
         <Link to={`/`}> <input className="btn" type="button" value="Already a Member?"/> </Link>
       </header>

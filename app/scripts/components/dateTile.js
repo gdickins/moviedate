@@ -25,6 +25,12 @@ export default React.createClass({
     });
   },
   render: function() {
+    let guests;
+    if(this.props.attendees.length === 1) {
+      guests = 'Person is';
+    } else {
+      guests = 'People are';
+    }
     let buttonValue;
     if(this.props.attendees.indexOf(localStorage.username) > -1) {
       buttonValue = "Cancel!";
@@ -35,11 +41,19 @@ export default React.createClass({
       <div className="dateTile">
         <img src = {this.props.url} />
         <div className="dateInfo">
-          {this.props.title} created by {this.props.creator}
-          {this.props.date} at {this.props.time}
+          <div className="dateGuests">
+            {this.props.attendees.length} {guests} attending.
+          </div>
+          <div className="dateMovie">
+            <span>{this.props.title}</span> created by <span>{this.props.creator}</span>
+          </div>
+          <div className="dateTime">
+            {this.props.date} at {this.props.time}
+          </div>
+          <div className="moviePlot">{this.props.overview}</div>
         </div>
 
-        <input className="tileBtn" type="button" value={buttonValue} onClick={this.joinDate} />
+        <input className="dateTileBtn" type="button" value={buttonValue} onClick={this.joinDate} />
       </div>
     )
   }

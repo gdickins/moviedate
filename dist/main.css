@@ -10,11 +10,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 270px;
+    height: 290px;
     border-radius: 3px; }
 
   main {
-    padding-top: 277px; }
+    padding-top: 310px; }
 
   h1 {
     color: #FFFFFF; }
@@ -49,7 +49,7 @@
     background-color: #EDEFED;
     margin: 5px;
     padding: 5%;
-    width: 90%; }
+    width: 85%; }
     .movieTile .movieInfo .movieTitle {
       margin-left: 0 auto;
       font-weight: bold;
@@ -100,20 +100,20 @@
     background-color: #EDEFED;
     padding: 5%;
     width: 100%; }
-    .dateTile span {
-      margin-left: 0 auto;
-      font-weight: bold;
+    .dateTile .dateGuests {
       font-size: 30px;
-      margin: 0 auto;
-      width: 75%; }
+      font-weight: bold; }
+    .dateTile .dateMovie span {
+      color: #FF5A5F; }
     .dateTile img {
       height: 100%;
       width: 50%;
       float: left;
       border-radius: 3px; }
-    .dateTile .movieInfo {
-      width: 50%;
-      float: right; }
+    .dateTile .dateInfo {
+      width: 45%;
+      float: right;
+      margin: 5px; }
 
   .btn {
     margin: 5px;
@@ -147,15 +147,33 @@
   .tileBtn:hover {
     background-color: #FF8882; }
 
+  .dateTileBtn {
+    margin-left: 5%;
+    font-size: 33px;
+    width: 45%;
+    height: 30vh;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 1s ease 0s; }
+
+  .dateTileBtn:hover {
+    background-color: #FF8882; }
+
   .searchBar {
     display: block;
     width: 88%;
     height: 51px;
     float: left;
-    font-size: 33px; }
+    font-size: 33px;
+    text-align: center; }
 
   .specialBtn {
     display: block;
+    margin-top: 15%;
     font-size: 33px;
     width: 10%;
     height: 10vh;
@@ -174,9 +192,27 @@
 
 #logoutBtn {
   width: 10%;
-  float: right; }
+  float: right;
+  border-radius: 33px;
+  height: 8vh;
+  background-color: #E00007; }
 
 #friends {
   margin-top: 20px; }
+
+#signupBtn {
+  height: 136px; }
+
+#dateListHeader {
+  height: 10%; }
+
+#dateListMain {
+  padding-top: 150px; }
+
+#homeHeader {
+  height: 140px; }
+
+#homeMain {
+  padding-top: 220px; }
 
 /*# sourceMappingURL=main.css.map */
