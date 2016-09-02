@@ -1,4 +1,4 @@
-@media (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 1000px) {
   body {
     background-color: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
@@ -173,7 +173,6 @@
 
   .specialBtn {
     display: block;
-    margin-top: 15%;
     font-size: 33px;
     width: 10%;
     height: 10vh;
@@ -186,33 +185,298 @@
     transition: all 1s ease 0s; }
 
   .specialBtn:hover {
-    background-color: #E00007; } }
-#modalCancel {
-  margin-top: 20px; }
+    background-color: #E00007; }
 
-#logoutBtn {
-  width: 10%;
-  float: right;
-  border-radius: 33px;
-  height: 8vh;
-  background-color: #E00007; }
+  #modalCancel {
+    margin-top: 20px; }
 
-#friends {
-  margin-top: 20px; }
+  #logoutBtn {
+    width: 10%;
+    float: right;
+    border-radius: 33px;
+    height: 8vh;
+    background-color: #4F5152;
+    border: none;
+    margin-bottom: 20px; }
 
-#signupBtn {
-  height: 136px; }
+  #friends {
+    margin-top: 20px; }
 
-#dateListHeader {
-  height: 10%; }
+  #signupBtn {
+    height: 136px; }
 
-#dateListMain {
-  padding-top: 150px; }
+  #dateListHeader {
+    height: 145px; }
 
-#homeHeader {
-  height: 140px; }
+  #dateListMain {
+    padding-top: 150px; }
 
-#homeMain {
-  padding-top: 220px; }
+  #homeHeader {
+    height: 220px; }
+
+  #homeMain {
+    padding-top: 220px; }
+
+  #loginHeader {
+    height: 100vh; }
+
+  #signupHeader {
+    height: 100vh; }
+
+  #modalHeader {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px; } }
+@media (min-width: 1000px) {
+  body {
+    background-color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box; }
+
+  header {
+    background-color: #4F5152;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 290px;
+    border-radius: 3px; }
+
+  main {
+    padding-top: 310px; }
+
+  h1 {
+    color: #FFFFFF; }
+
+  .logo {
+    float: left;
+    font-family: 'Baloo Tamma', cursive;
+    display: block;
+    width: 27%;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px; }
+
+  form input {
+    font-size: 33px;
+    border-radius: 3px; }
+
+  .loginForm input {
+    text-align: center;
+    display: block;
+    width: 70%;
+    float: left; }
+  .loginForm button {
+    display: block;
+    width: 28%;
+    height: 90px; }
+
+  .movieTile {
+    display: inline-block;
+    border-radius: 3px;
+    border-bottom: 1px solid #632D2D;
+    background-color: #EDEFED;
+    margin: 5px;
+    padding: 5%;
+    width: 39%;
+    float: left; }
+    .movieTile .movieInfo .movieTitle {
+      margin-left: 0 auto;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 0 auto;
+      width: 75%; }
+    .movieTile .movieInfo .moviePlot {
+      color: #484848;
+      display: block;
+      margin: 5%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      text-align: justify; }
+    .movieTile img {
+      height: 100%;
+      width: 50%;
+      float: left;
+      border-radius: 3px; }
+    .movieTile .movieInfo {
+      width: 50%;
+      float: right; }
+
+  .modalInput {
+    width: 80%;
+    text-align: center;
+    display: block;
+    float: left; }
+
+  .modalSubmit {
+    display: block;
+    font-size: 33px;
+    width: 18%;
+    height: 153px;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 1s ease 0s; }
+
+  .modalSubmit:hover {
+    background-color: #E00007; }
+
+  .dateTile {
+    border-radius: 3px;
+    border-bottom: 1px solid #632D2D;
+    background-color: #EDEFED;
+    margin: 5px;
+    padding: 5%;
+    width: 39%;
+    float: left; }
+    .dateTile .dateGuests {
+      font-size: 30px;
+      font-weight: bold; }
+    .dateTile .dateMovie span {
+      color: #FF5A5F; }
+    .dateTile img {
+      height: 100%;
+      width: 50%;
+      float: left;
+      border-radius: 3px; }
+    .dateTile .dateInfo {
+      width: 45%;
+      float: right;
+      margin: 5px; }
+
+  .btn {
+    margin: 5px;
+    font-size: 33px;
+    width: 98%;
+    height: 10vh;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 1s ease 0s; }
+
+  .btn:hover {
+    background-color: #FF8882; }
+
+  .tileBtn {
+    margin-left: 5%;
+    font-size: 33px;
+    width: 100%;
+    height: 10vh;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 1s ease 0s; }
+
+  .tileBtn:hover {
+    background-color: #FF8882; }
+
+  .dateTileBtn {
+    margin-left: 5%;
+    font-size: 33px;
+    width: 45%;
+    height: 30vh;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 1s ease 0s; }
+
+  .dateTileBtn:hover {
+    background-color: #FF8882; }
+
+  .searchForm {
+    width: 66%;
+    float: left;
+    margin-top: 5px; }
+
+  .searchBar {
+    display: block;
+    width: 88%;
+    height: 51px;
+    float: left;
+    font-size: 33px;
+    text-align: center; }
+
+  .specialBtn {
+    display: block;
+    font-size: 33px;
+    width: 10%;
+    height: 10vh;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 1s ease 0s; }
+
+  .specialBtn:hover {
+    background-color: #E00007; }
+
+  #modalCancel {
+    margin-top: 20px; }
+
+  #logoutBtn {
+    width: 5%;
+    float: right;
+    border-radius: 33px;
+    height: 8vh;
+    background-color: #4F5152;
+    border: none;
+    margin-bottom: 20px; }
+
+  #friends {
+    margin-top: 20px;
+    width: 45%; }
+
+  #signupBtn {
+    height: 136px; }
+
+  #dateListHeader {
+    height: 80px; }
+
+  #dateListMain {
+    padding-top: 85px; }
+
+  #homeHeader {
+    height: 160px; }
+
+  #homeMain {
+    padding-top: 160px; }
+
+  #loginHeader {
+    height: 100vh; }
+
+  #signupHeader {
+    height: 100vh; }
+
+  #modalHeader {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  #backHome {
+    width: 40%;
+    float: left; }
+
+  #modalForm {
+    padding-left: 15%;
+    padding-right: 15%; }
+
+  .dateProps {
+    margin-top: 10px;
+    margin-bottom: 10px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,6 @@
 @import "variables";
 
-@media (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 1000px) {
 
   body {
     background-color: $color-background;
@@ -195,7 +195,6 @@
   }
   .specialBtn {
     display: block;
-    margin-top: 15%;
     font-size: 33px;
     width: 10%;
     height: 10vh;
@@ -210,33 +209,323 @@
   .specialBtn:hover {
     background-color: $color-button-border;
   }
-}
-#modalCancel {
-  margin-top: 20px;
-}
-#logoutBtn {
-  width: 10%;
-  float:right;
-  border-radius: 33px;
-  height: 8vh;
-  background-color: $color-button-border;
-}
-#friends {
-  margin-top: 20px;
+  #modalCancel {
+    margin-top: 20px;
+  }
+  #logoutBtn {
+    width: 10%;
+    float:right;
+    border-radius: 33px;
+    height: 8vh;
+    background-color: $color-header;
+    border: none;
+    margin-bottom: 20px;
+  }
+  #friends {
+    margin-top: 20px;
+  }
+
+  #signupBtn {
+    height: 136px;
+  }
+  #dateListHeader {
+    height: 145px;
+  }
+  #dateListMain {
+    padding-top: 150px;
+  }
+  #homeHeader {
+    height: 220px;
+  }
+  #homeMain {
+    padding-top: 220px;
+  }
+  #loginHeader {
+    height: 100vh;
+  }
+  #signupHeader {
+    height: 100vh;
+  }
+  #modalHeader {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
-#signupBtn {
-  height: 136px;
-}
-#dateListHeader {
-  height: 10%;
-}
-#dateListMain {
-  padding-top: 150px;
-}
-#homeHeader {
-  height: 140px;
-}
-#homeMain {
-  padding-top: 220px;
+
+
+@media (min-width: 1000px) {
+  body {
+    background-color: $color-background;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+  }
+  header {
+    background-color: $color-header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 290px;
+    border-radius: 3px;
+  }
+  main {
+    padding-top: 310px;
+  }
+  h1 {
+    color: $color-background;
+  }
+  .logo {
+    float: left;
+    font-family: 'Baloo Tamma', cursive;
+    display: block;
+    width: 27%;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px;
+  }
+  form {
+    input {
+      font-size: 33px;
+      border-radius: 3px;
+    }
+  }
+  .loginForm {
+    input {
+      text-align: center;
+      display:block;
+      width: 70%;
+      float: left;
+  }
+    button {
+      display: block;
+      width: 28%;
+      height: 90px;
+    }
+  }
+
+  .movieTile {
+    display: inline-block;
+    border-radius: 3px;
+    border-bottom: 1px solid $color-border;
+    background-color: $color-tile-background;
+    margin: 5px;
+    padding: 5%;
+    width: 39%;
+    float: left;
+    .movieInfo {
+      .movieTitle {
+      margin-left: 0 auto;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 0 auto;
+      width: 75%;
+    }
+      .moviePlot {
+        color: $color-text;
+        display: block;
+        margin: 5%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        text-align: justify;
+      }
+    }
+    img {
+      height: 100%;
+      width: 50%;
+      float: left;
+      border-radius: 3px;
+    }
+    .movieInfo {
+      width: 50%;
+      float: right;
+    }
+  }
+  .modalInput {
+    width: 80%;
+    text-align: center;
+    display: block;
+    float: left;
+  }
+  .modalSubmit {
+    display: block;
+    font-size: 33px;
+    width: 18%;
+    height: 153px;
+    background-color: $color-button-regular;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid $color-button-border;
+    color: $color-background;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .modalSubmit:hover {
+    background-color: $color-button-border;
+  }
+  .dateTile {
+    border-radius: 3px;
+    border-bottom: 1px solid $color-border;
+    background-color: $color-tile-background;
+    margin: 5px;
+    padding: 5%;
+    width: 39%;
+    float: left;
+    .dateGuests {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .dateMovie {
+      span {
+        color: $color-button-regular
+      }
+    }
+    img {
+      height: 100%;
+      width: 50%;
+      float: left;
+      border-radius: 3px;
+    }
+    .dateInfo {
+      width: 45%;
+      float: right;
+      margin: 5px;
+    }
+  }
+
+  .btn {
+    margin: 5px;
+    font-size: 33px;
+    width: 98%;
+    height: 10vh;
+    background-color: $color-button-regular;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid $color-button-border;
+    color: $color-background;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .btn:hover {
+    background-color: $color-button-transition;
+  }
+  .tileBtn {
+    margin-left: 5%;
+    font-size: 33px;
+    width: 100%;
+    height: 10vh;
+    background-color: $color-button-regular;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid $color-button-border;
+    color: $color-background;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .tileBtn:hover {
+    background-color: $color-button-transition;
+  }
+  .dateTileBtn {
+    margin-left: 5%;
+    font-size: 33px;
+    width: 45%;
+    height: 30vh;
+    background-color: $color-button-regular;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid $color-button-border;
+    color: $color-background;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .dateTileBtn:hover {
+    background-color: $color-button-transition;
+  }
+  .searchForm {
+    width: 66%;
+    float: left;
+    margin-top: 5px;
+  }
+  .searchBar {
+    display: block;
+    width: 88%;
+    height: 51px;
+    float: left;
+    font-size: 33px;
+    text-align: center;
+  }
+  .specialBtn {
+    display: block;
+    font-size: 33px;
+    width: 10%;
+    height: 10vh;
+    background-color: $color-button-regular;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid $color-button-border;
+    color: $color-background;
+    text-decoration: none;
+    transition: all 1s ease 0s;
+  }
+  .specialBtn:hover {
+    background-color: $color-button-border;
+  }
+  #modalCancel {
+    margin-top: 20px;
+  }
+  #logoutBtn {
+    width: 5%;
+    float:right;
+    border-radius: 33px;
+    height: 8vh;
+    background-color: $color-header;
+    border: none;
+    margin-bottom: 20px;
+  }
+  #friends {
+    margin-top: 20px;
+    width: 45%;
+  }
+
+  #signupBtn {
+    height: 136px;
+  }
+  #dateListHeader {
+    height: 80px;
+  }
+  #dateListMain {
+    padding-top: 85px;
+  }
+  #homeHeader {
+    height: 160px;
+  }
+  #homeMain {
+    padding-top: 160px;
+  }
+  #loginHeader {
+    height: 100vh;
+  }
+  #signupHeader {
+    height: 100vh;
+  }
+  #modalHeader {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #backHome {
+    width: 40%;
+    float: left;
+  }
+  #modalForm {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .dateProps {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
 }

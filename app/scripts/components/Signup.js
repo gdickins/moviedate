@@ -37,7 +37,7 @@ export default React.createClass({
   render: function() {
     return (
       <div>
-      <header>
+      <header id="signupHeader">
         <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
         <form className="loginForm" onSubmit={this.submitHandler}>
           <input ref="username" type="text" placeholder="username" />

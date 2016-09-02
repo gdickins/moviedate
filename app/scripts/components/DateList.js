@@ -36,7 +36,7 @@ export default React.createClass({
       <header id="dateListHeader">
       <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
       <button className="btn" id="logoutBtn" onClick={store.session.logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button>
-      <Link to={`home`}><button className="btn" type="button"><i className="fa fa-home" aria-hidden="true"></i></button></Link>
+      <Link to={`home`}><button className="btn" id="backHome" type="button"><i className="fa fa-home" aria-hidden="true"></i>Find a Different Movie</button></Link>
       </header>
       <main id="dateListMain">
       {dateList}

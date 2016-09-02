@@ -41,16 +41,15 @@ export default React.createClass({
       <div className="dateTile">
         <img src = {this.props.url} />
         <div className="dateInfo">
-          <div className="dateGuests">
+          <div className="dateProps dateGuests">
             {this.props.attendees.length} {guests} attending.
           </div>
-          <div className="dateMovie">
+          <div className="dateProps dateMovie">
             <span>{this.props.title}</span> created by <span>{this.props.creator}</span>
           </div>
-          <div className="dateTime">
+          <div className="dateProps dateTime">
             {this.props.date} at {this.props.time}
           </div>
-          <div className="moviePlot">{this.props.overview}</div>
         </div>
 
         <input className="dateTileBtn" type="button" value={buttonValue} onClick={this.joinDate} />

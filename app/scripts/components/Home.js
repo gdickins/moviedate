@@ -50,7 +50,7 @@ export default React.createClass({
         <form className="searchForm" onSubmit={this.movieSearch}>
           <input ref="searchTerm" className="searchBar" placeholder="Find a Movie!" type="text"/> <button className="specialBtn" type="submit"> <i className='fa fa-search' aria-hidden='true'></i></button>
         </form>
-          <Link to={`dates`}><input id="friends" type="button" className="btn" value="Friends' Movie Plans"/> </Link>
+          <Link to={`dates`}><input id="friends" type="button" className="btn" value="Movies Other People are Seeing"/> </Link>
         </header>
         <main id="homeMain">
           {movieList}

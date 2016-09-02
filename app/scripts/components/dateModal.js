@@ -42,8 +42,8 @@ export default React.createClass({
   render: function() {
     return (
       <div style={this.containerStyles}>
-      <form onSubmit={this.createDate} style={this.containerStyles}>
-      <h1>When would you like to see {this.props.title}?</h1>
+      <form id="modalForm" onSubmit={this.createDate} style={this.containerStyles}>
+      <h1 id="modalHeader">When would you like to see {this.props.title}?</h1>
       <input className="modalInput" ref="date" type="date" min="2016-08-30" max="2020-08-30" placeholder="Date"/>
       <input className="modalInput" ref="location" type="location" placeholder="Location"/>
       <input className="modalInput" ref="time" type="time" placeholder="Time"/>
