@@ -22,9 +22,12 @@ export default React.createClass({
     }
     return (
       <div className="movieTile">
-        <span>{this.props.original_title}</span>
         <img src = {this.props.url} />
-        <input className="tileBtn" type="button" value="Create Date" onClick={this.showModal}/>
+        <div className="movieInfo">
+          <div className="movieTitle">{this.props.original_title}</div>
+          <div className="moviePlot">{this.props.overview}</div>
+          <input className="tileBtn" type="button" value="Create Date" onClick={this.showModal}/>
+        </div>
         {modalDisplay}
       </div>
     )

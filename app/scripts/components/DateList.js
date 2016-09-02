@@ -34,9 +34,9 @@ export default React.createClass({
     return (
       <div>
       <header>
-      <h1>Date List</h1>
-      <Link to={`home`}><input className="btn" type="button" value="Back to Home"/> </Link>
-      <input type="button" className="btn" value="Log out" onClick={store.session.logout} />
+      <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
+      <Link to={`home`}><button className="btn" type="button"><i className="fa fa-home" aria-hidden="true"></i></button></Link>
+      <button className="btn" onClick={store.session.logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button>
       </header>
       <main>
       {dateList}

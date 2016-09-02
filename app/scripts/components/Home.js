@@ -39,18 +39,18 @@ export default React.createClass({
         imageURL = `http://image.tmdb.org/t/p/w500${movie.poster_path}`;
       }
       return (
-        <MovieTile key={i} original_title={movie.original_title} url={imageURL} showModal={DateModal}/>
+        <MovieTile key={i} original_title={movie.original_title} url={imageURL} overview={movie.overview} showModal={DateModal}/>
       )
     })
     return (
       <div>
         <header>
-        <h1>Movies</h1>
-        <form onSubmit={this.movieSearch}>
-          <input ref="searchTerm" placeholder="Find a Movie!" type="text"/> <input className="searchBtn" type="submit" value="Movie Search" />
+        <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
+        <button className="btn" id="logoutBtn" onClick={store.session.logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button>
+        <form className="searchForm" onSubmit={this.movieSearch}>
+          <input ref="searchTerm" className="searchBar" placeholder="Find a Movie!" type="text"/> <button className="specialBtn" type="submit"> <i className='fa fa-search' aria-hidden='true'></i></button>
         </form>
-          <Link to={`dates`}><input type="button" className="btn" value="Find a Date"/> </Link>
-          <input type="button" className="btn" value="Log out" onClick={store.session.logout} />
+          <Link to={`dates`}><input id="friends" type="button" className="btn" value="Friends' Movie Plans"/> </Link>
         </header>
         <main>
           {movieList}

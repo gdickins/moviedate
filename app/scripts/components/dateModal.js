@@ -43,11 +43,11 @@ export default React.createClass({
       <div style={this.containerStyles}>
       <form onSubmit={this.createDate} style={this.containerStyles}>
       <h1>When would you like to see {this.props.title}?</h1>
-      <input ref="date" type="date" min="2016-08-30" max="2020-08-30" placeholder="Date"/>
-      <input ref="location" type="location" placeholder="Location"/>
-      <input ref="time" type="time" placeholder="Time"/>
-      <input className="searchBtn" type="submit" />
-      <input className="btn" type="button" value="Cancel" onClick={this.props.hideModal}/>
+      <input className="modalInput" ref="date" type="date" min="2016-08-30" max="2020-08-30" placeholder="Date"/>
+      <input className="modalInput" ref="location" type="location" placeholder="Location"/>
+      <input className="modalInput" ref="time" type="time" placeholder="Time"/>
+      <button className="modalSubmit" type="submit"><i className="fa fa-ticket" aria-hidden="true"></i></button>
+      <input className="btn" id="modalCancel" type="button" value="Find a Different Movie" onClick={this.props.hideModal}/>
       </form>
       </div>
     )

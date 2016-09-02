@@ -39,13 +39,13 @@ export default React.createClass({
     return (
       <div>
       <header>
-        <h1>Movie Date</h1>
-        <form onSubmit={this.submitHandler}>
+        <h1 className="logo"><i className="fa fa-film" aria-hidden="true"></i> Movie Friends</h1>
+        <form className="loginForm">
           <input ref="username" type="text" placeholder="username" />
           <input ref="password" type="password" placeholder="password" />
-          <input className="searchBtn" type="submit" value="Log In" />
+          <button onClick={this.submitHandler} className="btn" type="submit"><i className="fa fa-sign-in" aria-hidden="true"></i></button>
         </form>
-          <Link to={`signup`}><input className="btn" type="button" value="Sign Up"/> </Link>
+          <Link to={`signup`}><input className="btn" type="button" value="New User?"/> </Link>
 
       </header>
 

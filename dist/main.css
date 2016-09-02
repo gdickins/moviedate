@@ -1,225 +1,182 @@
-@media only screen and (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 1000px) and (orientation: portrait) {
   body {
-    background-color: #AA3939;
-    font-family: 'Open Sans', sans-serif; }
-
-  input {
-    display: block;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto; }
+    background-color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box; }
 
   header {
-    background-color: #1D1111;
-    height: 35vh;
-    border-radius: 10px; }
+    background-color: #4F5152;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
+    border-radius: 3px; }
+
+  main {
+    padding-top: 277px; }
 
   h1 {
-    color: #F13333;
-    margin: 0 auto;
-    width: 20%; }
+    color: #FFFFFF; }
 
-  form {
-    display: flex;
-    flex-direction: column; }
-    form input {
-      font-size: 24px;
-      border-radius: 10px; }
+  .logo {
+    float: left;
+    font-family: 'Baloo Tamma', cursive;
+    display: block;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px; }
+
+  form input {
+    font-size: 33px;
+    border-radius: 3px; }
+
+  .loginForm input {
+    text-align: center;
+    display: block;
+    width: 70%;
+    float: left; }
+  .loginForm button {
+    display: block;
+    width: 28%;
+    height: 90px; }
 
   .movieTile {
-    border: 2px solid #632D2D;
-    border-radius: 10px;
-    background-color: #F13333;
-    display: flex;
-    flex-direction: column;
-    width: 20vh;
-    height: 50vh; }
-    .movieTile span {
-      font-size: 18px;
-      color: #1D1111;
-      height: 20%;
-      word-wrap: normal;
-      text-align: center;
-      vertical-align: middle; }
+    display: inline-block;
+    border-radius: 3px;
+    border-bottom: 1px solid #632D2D;
+    background-color: #EDEFED;
+    margin: 5px;
+    padding: 5%;
+    width: 90%; }
+    .movieTile .movieInfo .movieTitle {
+      margin-left: 0 auto;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 0 auto;
+      width: 75%; }
+    .movieTile .movieInfo .moviePlot {
+      color: #484848;
+      display: block;
+      margin: 5%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      text-align: justify; }
     .movieTile img {
-      height: 60%; }
+      height: 100%;
+      width: 50%;
+      float: left;
+      border-radius: 3px; }
+    .movieTile .movieInfo {
+      width: 50%;
+      float: right; }
+
+  .modalInput {
+    width: 80%;
+    text-align: center;
+    display: block;
+    float: left; }
+
+  .modalSubmit {
+    display: block;
+    font-size: 33px;
+    width: 18%;
+    height: 153px;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 1s ease 0s; }
+
+  .modalSubmit:hover {
+    background-color: #E00007; }
 
   .dateTile {
-    border: 2px solid #632D2D;
-    border-radius: 10px;
-    background-color: #F13333;
-    display: flex;
-    flex-direction: column;
-    width: 20vh;
-    height: 65vh; }
-    .dateTile author {
-      font-size: 33px;
-      color: #1D1111;
-      height: 25%;
-      word-wrap: normal;
-      text-align: center;
-      vertical-align: middle; }
-    .dateTile time {
-      font-size: 33px;
-      color: #632D2D;
-      height: 30%;
-      word-wrap: normal;
-      text-align: center;
-      vertical-align: middle; }
+    border-radius: 3px;
+    border-bottom: 1px solid #632D2D;
+    background-color: #EDEFED;
+    padding: 5%;
+    width: 100%; }
+    .dateTile span {
+      margin-left: 0 auto;
+      font-weight: bold;
+      font-size: 30px;
+      margin: 0 auto;
+      width: 75%; }
     .dateTile img {
-      height: 60%; }
+      height: 100%;
+      width: 50%;
+      float: left;
+      border-radius: 3px; }
+    .dateTile .movieInfo {
+      width: 50%;
+      float: right; }
 
   .btn {
-    font-size: 24px;
-    background-color: #632D2D;
-    border-radius: 10px;
-    color: #FF1717;
+    margin: 5px;
+    font-size: 33px;
+    width: 98%;
+    height: 10vh;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
     text-decoration: none;
     transition: all 1s ease 0s; }
 
   .btn:hover {
-    font-size: 24px;
-    background-color: #1D1111; }
+    background-color: #FF8882; }
 
   .tileBtn {
+    margin-left: 5%;
     font-size: 33px;
     width: 100%;
     height: 10vh;
-    background-color: #632D2D;
-    border-radius: 10px;
-    color: #FF1717;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
     text-decoration: none;
     transition: all 1s ease 0s; }
 
   .tileBtn:hover {
-    background-color: #1D1111; }
+    background-color: #FF8882; }
 
-  .searchBtn {
-    font-size: 24px;
-    background-color: #FF1717;
-    border-radius: 10px;
-    color: #1D1111;
+  .searchBar {
+    display: block;
+    width: 88%;
+    height: 51px;
+    float: left;
+    font-size: 33px; }
+
+  .specialBtn {
+    display: block;
+    font-size: 33px;
+    width: 10%;
+    height: 10vh;
+    background-color: #FF5A5F;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #E00007;
+    color: #FFFFFF;
     text-decoration: none;
     transition: all 1s ease 0s; }
 
-  .searchBtn:hover {
-    font-size: 24px;
-    background-color: #1D1111;
-    color: #FF1717; }
+  .specialBtn:hover {
+    background-color: #E00007; } }
+#modalCancel {
+  margin-top: 20px; }
 
-  main {
-    display: flex;
-    flex-wrap: wrap; } }
-body {
-  background-color: #AA3939;
-  font-family: 'Open Sans', sans-serif; }
+#logoutBtn {
+  width: 10%;
+  float: right; }
 
-input {
-  display: block;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto; }
-
-header {
-  background-color: #1D1111;
-  height: 35vh;
-  border-radius: 10px; }
-
-h1 {
-  color: #F13333;
-  margin: 0 auto;
-  width: 20%; }
-
-form {
-  display: flex;
-  flex-direction: column; }
-  form input {
-    font-size: 20px;
-    border-radius: 10px; }
-
-.movieTile {
-  border: 2px solid #632D2D;
-  border-radius: 10px;
-  background-color: #F13333;
-  display: flex;
-  flex-direction: column;
-  width: 20vh;
-  height: 50vh; }
-  .movieTile span {
-    font-size: 20px;
-    color: #1D1111;
-    height: 20%;
-    word-wrap: normal;
-    text-align: center;
-    vertical-align: middle; }
-  .movieTile img {
-    height: 60%; }
-
-.dateTile {
-  border: 2px solid #632D2D;
-  border-radius: 10px;
-  background-color: #F13333;
-  display: flex;
-  flex-direction: column;
-  width: 20vh;
-  height: 65vh; }
-  .dateTile author {
-    font-size: 16px;
-    color: #1D1111;
-    height: 25%;
-    word-wrap: normal;
-    text-align: center;
-    vertical-align: middle; }
-  .dateTile time {
-    font-size: 12px;
-    color: #632D2D;
-    height: 30%;
-    word-wrap: normal;
-    text-align: center;
-    vertical-align: middle; }
-  .dateTile img {
-    height: 60%; }
-
-.btn {
-  font-size: 20px;
-  background-color: #632D2D;
-  border-radius: 10px;
-  color: #FF1717;
-  text-decoration: none;
-  transition: all 1s ease 0s; }
-
-.btn:hover {
-  font-size: 20px;
-  background-color: #1D1111; }
-
-.tileBtn {
-  font-size: 14px;
-  width: 100%;
-  height: 10vh;
-  background-color: #632D2D;
-  border-radius: 10px;
-  color: #FF1717;
-  text-decoration: none;
-  transition: all 1s ease 0s; }
-
-.tileBtn:hover {
-  background-color: #1D1111; }
-
-.searchBtn {
-  font-size: 20px;
-  background-color: #FF1717;
-  border-radius: 10px;
-  color: #1D1111;
-  text-decoration: none;
-  transition: all 1s ease 0s; }
-
-.searchBtn:hover {
-  font-size: 20px;
-  background-color: #1D1111;
-  color: #FF1717; }
-
-main {
-  display: flex;
-  flex-wrap: wrap; }
+#friends {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */
